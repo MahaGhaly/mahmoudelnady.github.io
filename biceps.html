@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Biceps workouts</title>
+
+		<!-- custom css -->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h2><a href="./index.html"><< Back</a></h2>
+			<h1>Biceps workouts</h1>
+
+			<div class="video-container">
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+				<div class="video">
+					<video src="images/videos/video4-1.MP4" muted></video>
+				</div>
+			</div>
+			<div class="popup-video">
+				<span>&times;</span>
+				<video src="images/videos/video4-2.MP4" muted autoplay controls></video>
+			</div>
+		</div>
+		<!-- Custom js -->
+		<script>
+			document.querySelectorAll(".video-container video").forEach((vid) => {
+				vid.onclick = () => {
+					document.querySelector(".popup-video").style.display = "block";
+					document.querySelector(".popup-video video").src =
+						vid.getAttribute("src");
+				};
+			});
+
+			document.querySelector(".popup-video span").onclick = () => {
+				document.querySelector(".popup-video").style.display = "none";
+			};
+		</script>
+	</body>
+</html>
